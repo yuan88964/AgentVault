@@ -20,7 +20,7 @@
   <img src="assets/diagram-deep-module-internals.png" width="96%" alt="Skills/develop 深模块内部白盒机制：吸收旧技能与 Caller Override 接缝注入" />
 </p>
 
-### 1.3 深模块三态接口契约与结构化转接（`Standard / Normalize / Error + Route`）
+### 1.3 深模块三态接口契约与结构化转接（`Standard / Normalize / Bailout`）
 
 <p align="center">
   <img src="assets/diagram-three-state-contract.png" width="92%" alt="深模块三态接口契约与结构化转接流转图" />
@@ -28,7 +28,7 @@
 
 | 目录 / 入口文件 | 角色定位 | 说明 |
 | :--- | :--- | :--- |
-| **[`Agent全局配置/Global_Agent_Rules.md`](Agent全局配置/Global_Agent_Rules.md)** | 全库唯一顶层路由器（Role A） | 统一汇报语体契约、求真溯源与高噪隔离、四大核心深模块一步直达路由以及三态接口契约（`Standard / Normalize / Error + Route`） |
+| **[`Agent全局配置/Global_Agent_Rules.md`](Agent全局配置/Global_Agent_Rules.md)** | 全库唯一顶层路由器（Role A） | 统一汇报语体契约、求真溯源与高噪隔离、四大核心深模块一步直达路由以及三态接口契约（`Standard / Normalize / Bailout`） |
 | **[`Skills/develop/SKILL.md`](Skills/develop/SKILL.md)** | 软件开发与长程编排深模块（Role B1） | 唯一软件开发入口：已消化合并原 `implement-spec`、`implement`、`engineering-decisions`，按规模自动分流单切片流与多工单 DAG 流，内部按分支渐进加载测试节奏（[`testing.md`](Skills/develop/testing.md)）、6 行交接与修订协议（[`protocol.md`](Skills/develop/protocol.md)）及多宿主适配（[`hosts.md`](Skills/develop/hosts.md)） |
 | **[`Skills/codebase-design/SKILL.md`](Skills/codebase-design/SKILL.md)** | 深模块设计方法论底座（Role B2） | `1. Gather → 2. Split → 3. Polish` 深模块构造决策树与多工单并发四阶段防线，内部按需加载 [`DEEPENING.md`](Skills/codebase-design/DEEPENING.md) 与 [`DESIGN-IT-TWICE.md`](Skills/codebase-design/DESIGN-IT-TWICE.md) |
 | **[`Skills/writing-for-agents/SKILL.md`](Skills/writing-for-agents/SKILL.md)** | 提示词、技能与知识库构建深模块（Role B2） | 全量上下文即样本、双重负载权衡、四象限引导，以及按 `Gather → Split → Polish` 构造与打磨 A/B1/B2/C 四类文档角色，内部按需加载 [`SKILL-MECHANICS.md`](Skills/writing-for-agents/SKILL-MECHANICS.md) |
