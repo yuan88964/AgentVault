@@ -6,11 +6,21 @@
 
 ---
 
-## 一、全局版图与核心目录
+## 一、全局版图与深模块内部白盒机制
+
+### 1.1 全局深模块分层与多宿主软路由架构
 
 <p align="center">
   <img src="assets/diagram-agentvault-architecture.png" width="98%" alt="AgentVault 深模块分层架构与多宿主软路由拓扑图" />
 </p>
+
+### 1.2 深模块内部白盒机制：以 `Skills/develop/` 为例看如何“消化旧技能、按接缝调子零件”
+
+<p align="center">
+  <img src="assets/diagram-deep-module-internals.png" width="96%" alt="Skills/develop 深模块内部白盒机制：吸收旧技能与 Caller Override 接缝注入" />
+</p>
+
+### 1.3 深模块三态接口契约与结构化转接（`Standard / Normalize / Error + Route`）
 
 <p align="center">
   <img src="assets/diagram-three-state-contract.png" width="92%" alt="深模块三态接口契约与结构化转接流转图" />
@@ -19,11 +29,11 @@
 | 目录 / 入口文件 | 角色定位 | 说明 |
 | :--- | :--- | :--- |
 | **[`Agent全局配置/Global_Agent_Rules.md`](Agent全局配置/Global_Agent_Rules.md)** | 全库唯一顶层路由器（Role A） | 统一汇报语体契约、求真溯源与高噪隔离、四大核心深模块一步直达路由以及三态接口契约（`Standard / Normalize / Error + Route`） |
-| **[`Skills/develop/SKILL.md`](Skills/develop/SKILL.md)** | 软件开发与长程编排深模块（Role B1） | 唯一软件开发入口：按规模自动分流单切片流与多工单 DAG 流，内聚测试节奏（[`testing.md`](Skills/develop/testing.md)）、6 行交接与修订协议（[`protocol.md`](Skills/develop/protocol.md)）及多宿主适配（[`hosts.md`](Skills/develop/hosts.md)） |
-| **[`Skills/codebase-design/SKILL.md`](Skills/codebase-design/SKILL.md)** | 深模块设计方法论（Role B2） | `1. Gather → 2. Split → 3. Polish` 深模块构造决策树与多工单并发四阶段防线 |
-| **[`Skills/writing-for-agents/SKILL.md`](Skills/writing-for-agents/SKILL.md)** | 提示词、技能与知识库构建深模块（Role B2） | 全量上下文即样本、四象限引导、分角色（A/B1/B2/C）深模块构造与三步瘦身漏斗 |
-| **[`Skills/mermaid-diagrams/SKILL.md`](Skills/mermaid-diagrams/SKILL.md)** | 系统架构与图解表达深模块（Role B2） | 画图判定、5～15 节点规模契约、`.md`/`.png` 二选一交付与 C4 / 时序 / 状态 / 瑞士奶酪六大标准模板 |
-| **[`Skills/`](Skills/) 其余 12 个工程子零件** | 原子执行与评审零件（Role B2） | 包含 `tdd`、`code-review`、`diagnosing-bugs`、`to-spec`、`to-tickets`、`grilling`、`domain-modeling`、`node-link-and-diagram-layout`、`research`、`resolving-merge-conflicts`、`pr`、`prototype` |
+| **[`Skills/develop/SKILL.md`](Skills/develop/SKILL.md)** | 软件开发与长程编排深模块（Role B1） | 唯一软件开发入口：已消化合并原 `implement-spec`、`implement`、`engineering-decisions`，按规模自动分流单切片流与多工单 DAG 流，内部按分支渐进加载测试节奏（[`testing.md`](Skills/develop/testing.md)）、6 行交接与修订协议（[`protocol.md`](Skills/develop/protocol.md)）及多宿主适配（[`hosts.md`](Skills/develop/hosts.md)） |
+| **[`Skills/codebase-design/SKILL.md`](Skills/codebase-design/SKILL.md)** | 深模块设计方法论底座（Role B2） | `1. Gather → 2. Split → 3. Polish` 深模块构造决策树与多工单并发四阶段防线，内部按需加载 [`DEEPENING.md`](Skills/codebase-design/DEEPENING.md) 与 [`DESIGN-IT-TWICE.md`](Skills/codebase-design/DESIGN-IT-TWICE.md) |
+| **[`Skills/writing-for-agents/SKILL.md`](Skills/writing-for-agents/SKILL.md)** | 提示词、技能与知识库构建深模块（Role B2） | 全量上下文即样本、四象限引导、分角色（A/B1/B2/C）深模块构造与三步瘦身漏斗，内部按需加载 [`SKILL-MECHANICS.md`](Skills/writing-for-agents/SKILL-MECHANICS.md) |
+| **[`Skills/mermaid-diagrams/SKILL.md`](Skills/mermaid-diagrams/SKILL.md)** | 系统架构与图解表达深模块（Role B2） | 画图判定、5～15 节点规模契约、`.md`/`.png` 二选一交付与 C4 / 时序 / 状态 / 瑞士奶酪六大标准模板，内部按图型加载 `references/*.md` |
+| **[`Skills/`](Skills/) 其余 12 个工程子零件** | 原子执行与评审零件（Role B2） | 包含 `tdd`、`code-review`、`diagnosing-bugs`、`to-spec`、`to-tickets`、`grilling`、`domain-modeling`、`node-link-and-diagram-layout`、`research`、`resolving-merge-conflicts`、`pr`、`prototype`（预留 `Caller Override` 接缝，零反向引用上层编排器） |
 | **[`参考资料/00 参考资料导览.md`](参考资料/00%20参考资料导览.md)** | 软件设计调研笔记（Role C） | 收录面向过程/面向对象/信息隐藏演进调研，以及复杂度控制、深模块构造与多工单并发设计深度调研 |
 | **[`Setup-ObsidianRelay.ps1`](Setup-ObsidianRelay.ps1)** | 一键迁入与软路由配置器 | 支持将本库合并进你已有的本地 Obsidian 仓库，并自动将 RelayStudio（含纯净路由版 `pure-portable`）软路由挂载至该 Obsidian 仓库 |
 
