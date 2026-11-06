@@ -6,6 +6,14 @@
 
 ## 一、全局版图与核心目录
 
+<p align="center">
+  <img src="assets/diagram-agentvault-architecture.png" width="98%" alt="AgentVault 深模块分层架构与多宿主软路由拓扑图" />
+</p>
+
+<p align="center">
+  <img src="assets/diagram-three-state-contract.png" width="92%" alt="深模块三态接口契约与结构化转接流转图" />
+</p>
+
 | 目录 / 入口文件 | 角色定位 | 说明 |
 | :--- | :--- | :--- |
 | **[`Agent全局配置/Global_Agent_Rules.md`](Agent全局配置/Global_Agent_Rules.md)** | 全库唯一顶层路由器（Role A） | 统一汇报语体契约、求真溯源与高噪隔离、四大核心深模块一步直达路由以及三态接口契约（`Standard / Normalize / Error + Route`） |
