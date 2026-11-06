@@ -1,5 +1,7 @@
 # AgentVault — 面向 RelayStudio 与多宿主 Agent 的 Obsidian 深模块规则与技能库
 
+[![LINUX DO](https://img.shields.io/badge/Community-LINUX%20DO-0F172A?style=flat-square)](https://linux.do/)
+
 **AgentVault** 是基于信息隐藏（Parnas）与深模块原则（Ousterhout *A Philosophy of Software Design*）构建的 **Obsidian 工程规则与技能母本仓库**。它可以作为独立 Obsidian 仓库直接打开，也可以通过仓库自带的 **`Setup-ObsidianRelay.ps1`** 一键合并进你现有的本地 Obsidian 仓库，并将 [**RelayStudio**](https://github.com/yuan88964/RelayStudio)（以及本机的 Codex / Claude / Antigravity）通过 NTFS 软/硬链接统一路由到你的 Obsidian 仓库，实现**“在 Obsidian 中修改一处规则或技能，全平台 Agent 实时同步生效”**。
 
 ---
@@ -58,3 +60,9 @@ powershell -ExecutionPolicy Bypass -File .\Setup-ObsidianRelay.ps1 `
 
 > **底层做了什么？**
 > `Setup-ObsidianRelay.ps1` 会自动在 `RelayStudio\data\settings.json` 中写入 `"agents_md_target"` 与 `"skills_junction_target"`，并将 `RelayStudio\engine-data\skills` 建立为指向你 Obsidian 仓库 `Skills/` 的 **NTFS Junction 软链接**，将 `RelayStudio\engine-data\AGENTS.md` 建立为指向 `Agent全局配置/Global_Agent_Rules.md` 的**硬链接**。如果加上 `-LinkLocalCliAgents` 参数，还会一并挂载到本机的 `~/.codex/skills` 与 `~/.claude/skills`。
+
+---
+
+## 友链与致谢
+
+本项目积极参与并认可 **[LINUX DO 社区](https://linux.do)**（友链：https://linux.do ）。
