@@ -28,14 +28,14 @@
 
 | 目录 / 入口文件 | 角色定位 | 说明 |
 | :--- | :--- | :--- |
-| **[`Agent全局配置/Global_Agent_Rules.md`](Agent全局配置/Global_Agent_Rules.md)** | 全库唯一顶层路由器（Role A） | 统一汇报语体契约、求真溯源与高噪隔离、四大核心深模块一步直达路由以及三态接口契约（`Standard / Normalize / Bailout`） |
-| **[`Skills/develop/SKILL.md`](Skills/develop/SKILL.md)** | 软件开发与长程编排深模块（Role B1） | 唯一软件开发入口：已消化合并原 `implement-spec`、`implement`、`engineering-decisions`，按规模自动分流单切片流与多工单 DAG 流，内部按分支渐进加载测试节奏（[`testing.md`](Skills/develop/testing.md)）、6 行交接与修订协议（[`protocol.md`](Skills/develop/protocol.md)）及多宿主适配（[`hosts.md`](Skills/develop/hosts.md)） |
-| **[`Skills/codebase-design/SKILL.md`](Skills/codebase-design/SKILL.md)** | 深模块设计方法论底座（Role B2） | `1. Gather → 2. Split → 3. Polish` 深模块构造决策树与多工单并发四阶段防线，内部按需加载 [`DEEPENING.md`](Skills/codebase-design/DEEPENING.md) 与 [`DESIGN-IT-TWICE.md`](Skills/codebase-design/DESIGN-IT-TWICE.md) |
-| **[`Skills/writing-for-agents/SKILL.md`](Skills/writing-for-agents/SKILL.md)** | 提示词、技能与知识库构建深模块（Role B2） | 全量上下文即样本、双重负载权衡、四象限引导，以及按 `Gather → Split → Polish` 构造与打磨 A/B1/B2/C 四类文档角色，内部按需加载 [`SKILL-MECHANICS.md`](Skills/writing-for-agents/SKILL-MECHANICS.md) |
-| **[`Skills/mermaid-diagrams/SKILL.md`](Skills/mermaid-diagrams/SKILL.md)** | 系统架构与图解表达深模块（Role B2） | 画图判定、5～15 节点规模契约、`.md`/`.png` 二选一交付与 C4 / 时序 / 状态 / 瑞士奶酪六大标准模板，内部按图型加载 `references/*.md` |
-| **[`Skills/`](Skills/) 其余 12 个工程子零件** | 原子执行与评审零件（Role B2） | 包含 `tdd`、`code-review`、`diagnosing-bugs`、`to-spec`、`to-tickets`、`grilling`、`domain-modeling`、`node-link-and-diagram-layout`、`research`、`resolving-merge-conflicts`、`pr`、`prototype`（预留 `Caller Override` 接缝，零反向引用上层编排器） |
-| **[`参考资料/00 参考资料导览.md`](参考资料/00%20参考资料导览.md)** | 软件设计调研笔记（Role C） | 收录面向过程/面向对象/信息隐藏演进调研，以及复杂度控制、深模块构造与多工单并发设计深度调研 |
-| **[`Setup-ObsidianRelay.ps1`](Setup-ObsidianRelay.ps1)** | 一键迁入与软路由配置器 | 支持将本库合并进你已有的本地 Obsidian 仓库，并自动将 RelayStudio（含纯净路由版 `pure-portable`）软路由挂载至该 Obsidian 仓库 |
+| **[`Agent全局配置/Global_Agent_Rules.md`](Agent全局配置/Global_Agent_Rules.md)** | 全库唯一顶层路由器 | 统一汇报语体契约、求真溯源与高噪隔离、先对齐后执行节奏以及核心深模块一步直达路由 |
+| **[`Agent全局配置/Skills/develop/SKILL.md`](Agent全局配置/Skills/develop/SKILL.md)** | 软件开发与长程编排器 | 唯一软件开发入口：按规模自动分流单切片流与多工单 DAG 流，内部按分支渐进加载测试节奏（[`testing.md`](Agent全局配置/Skills/develop/testing.md)）、6 行交接与修订协议（[`protocol.md`](Agent全局配置/Skills/develop/protocol.md)）及多宿主适配（[`hosts.md`](Agent全局配置/Skills/develop/hosts.md)） |
+| **[`Agent全局配置/Skills/module-design/SKILL.md`](Agent全局配置/Skills/module-design/SKILL.md)** | 深模块设计共享子程序 | `1. Gather → 2. Split → 3. Polish` 深模块构造决策树、跨域分支路由与 5 行蓝图返回契约 |
+| **[`Agent全局配置/Skills/writing-for-agents/SKILL.md`](Agent全局配置/Skills/writing-for-agents/SKILL.md)** | 提示词、技能与知识库编排器 | 全量上下文即样本、双重负载权衡、四象限引导，以及联动 `module-design` 构造与打磨四类模块角色 |
+| **[`Agent全局配置/Skills/mermaid-diagrams/SKILL.md`](Agent全局配置/Skills/mermaid-diagrams/SKILL.md)** | 系统架构与图解通用子程序 | 画图判定、5～15 节点规模契约、内聚拓扑布局算法、`.md`/`.png` 单轨交付与六大标准模板 |
+| **[`Agent全局配置/Skills/`](Agent全局配置/Skills/) 其余 10 个工程模块** | 专职执行器与共享子程序 | 包含 `tdd`、`code-review`、`diagnosing-bugs`、`to-spec`、`to-tickets`、`grilling`、`domain-modeling`、`research`、`resolving-merge-conflicts`、`pr`、`prototype` |
+| **[`参考资料/00 参考资料导览.md`](参考资料/00%20参考资料导览.md)** | 软件设计调研参考资料 | 收录面向过程/面向对象/信息隐藏演进调研，以及复杂度控制、深模块构造与多工单并发设计深度调研 |
+| **[`Setup-ObsidianRelay.ps1`](Setup-ObsidianRelay.ps1)** | 一键迁入与软路由配置器 | 支持将本库合并进你已有的本地 Obsidian 仓库，并自动将 RelayStudio 软路由挂载至该 Obsidian 仓库 |
 
 ---
 
@@ -51,7 +51,7 @@
 git clone https://github.com/yuan88964/AgentVault.git
 cd AgentVault
 
-# 将 Agent全局配置/、Skills/ 与参考资料合并至你现有的 Obsidian 库，并自动将 RelayStudio 软路由指向你的 Obsidian 库：
+# 将 Agent全局配置/ 与 参考资料/ 合并至你现有的 Obsidian 库，并自动将 RelayStudio 软路由指向你的 Obsidian 库：
 powershell -ExecutionPolicy Bypass -File .\Setup-ObsidianRelay.ps1 `
   -TargetObsidianVault "D:\MyObsidianVault" `
   -RelayStudioDir "D:\RelayStudio"
@@ -69,7 +69,7 @@ powershell -ExecutionPolicy Bypass -File .\Setup-ObsidianRelay.ps1 `
 ```
 
 > **底层做了什么？**
-> `Setup-ObsidianRelay.ps1` 会自动在 `RelayStudio\data\settings.json` 中写入 `"agents_md_target"` 与 `"skills_junction_target"`，并将 `RelayStudio\engine-data\skills` 建立为指向你 Obsidian 仓库 `Skills/` 的 **NTFS Junction 软链接**，将 `RelayStudio\engine-data\AGENTS.md` 建立为指向 `Agent全局配置/Global_Agent_Rules.md` 的**硬链接**。如果加上 `-LinkLocalCliAgents` 参数，还会一并挂载到本机的 `~/.codex/skills` 与 `~/.claude/skills`。
+> `Setup-ObsidianRelay.ps1` 会自动在 `RelayStudio\data\settings.json` 中写入 `"agents_md_target"` 与 `"skills_junction_target"`，并将 `RelayStudio\engine-data\skills` 建立为指向你 Obsidian 仓库 `Agent全局配置/Skills/` 的 **NTFS Junction 软链接**，将 `RelayStudio\engine-data\AGENTS.md` 建立为指向 `Agent全局配置/Global_Agent_Rules.md` 的**硬链接**。如果加上 `-LinkLocalCliAgents` 参数，还会一并挂载到本机的 `~/.codex/skills` 与 `~/.claude/skills`。
 
 ---
 
